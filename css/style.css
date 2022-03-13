@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../images/bg-intro-desktop.png), -webkit-gradient(linear, left top, left bottom, from(#ff7a7a), to(#ff7a7a));
+  background: url(../images/bg-intro-desktop.png), linear-gradient(180deg, #ff7a7a, #ff7a7a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  margin: 50px auto;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3%;
+}
+
+.card-text-part {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+.card-text-part h1 {
+  margin: 1rem auto;
+  font-size: 3rem;
+}
+.card-text-part p {
+  margin: 0;
+  margin-left: 5rem;
+  white-space: initial;
+  width: 70%;
+}
+
+.card-form-part {
+  width: 50%;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card-form-part .free-div {
+  width: 75%;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 50px;
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: #6055a5;
+  -webkit-box-shadow: 0px 7px 1px 0px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 7px 1px 0px rgba(0, 0, 0, 0.18);
+}
+.card-form-part .free-div span {
+  font-weight: bold;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 75%;
+  -webkit-box-shadow: 0px 7px 1px 0px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 7px 1px 0px rgba(0, 0, 0, 0.18);
+}
+form input {
+  width: 99%;
+  height: 50px;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #b9b6d3;
+}
+form input:focus {
+  border: 1px solid #6055a5;
+}
+form button {
+  width: 96%;
+  margin-left: 0.6rem;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #38cc8c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 7px 1px 0px #2aa26e;
+          box-shadow: 0px 7px 1px 0px #2aa26e;
+}
+form small {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 1rem;
+  color: #b9b6d3;
+}
+form small span {
+  color: #ff7a7a;
+  font-weight: bold;
+}
+
+.error input {
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  border: 2px solid #ff7a7a;
+}
+.error p {
+  font-size: 10px;
+  text-align: right;
+  color: #ff7a7a;
+  font-weight: bold;
+  font-style: italic;
+  display: block !important;
+}
+
+.input-div p {
+  display: none;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    height: 100%;
+    overflow: scroll;
+    background-repeat: repeat;
+  }
+
+  .container {
+    margin: 20px auto;
+  }
+
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card .card-text-part {
+    width: 100%;
+  }
+  .card .card-text-part h1 {
+    font-size: 2rem;
+  }
+  .card .card-text-part p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .card .card-form-part {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .card .card-form-part .free-div {
+    width: 100%;
+  }
+  .card .card-form-part form {
+    width: 100%;
+    padding: 1rem;
+  }
+  .card .card-form-part form button {
+    width: 100%;
+    margin-left: 0;
+  }
+}

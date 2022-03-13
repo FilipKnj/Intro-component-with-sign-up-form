@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+$Accent: hsl(248, 32%, 49%);
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Dark-Blue: hsl(249, 10%, 26%);
+$Grayish-Blue: hsl(246, 25%, 77%);
+
+html{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    background: url(../images/bg-intro-desktop.png),linear-gradient(180deg, hsl(0, 100%, 74%), hsl(0, 100%, 74%) );
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.container{
+    margin: 50px auto;
+}
+
+.card{
+    display: flex;
+    padding: 3%;
+
+}
+
+.card-text-part{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    h1{
+        margin: 1rem auto;
+        font-size: 3rem;
+    }
+    p{
+        margin: 0;
+        margin-left: 5rem;
+        white-space: initial;
+        width: 70%;
+    }
+}
+
+.card-form-part{
+    width: 50%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .free-div{
+        width: 75%;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 50px;
+        margin-bottom: 1rem;
+        color:#fff;
+        background-color: $Accent;
+        box-shadow: 0px 7px 1px 0px rgba(0,0,0,0.18);
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 75%;
+    box-shadow: 0px 7px 1px 0px rgba(0,0,0,0.18);
+     input{
+        width: 99%;
+        height: 50px;
+        margin: 0.5rem auto;   
+        padding: 1rem;
+        font-weight: bold;
+        border-radius: 3px;
+        outline:none;
+        border: 1px solid $Grayish-Blue;
+        &:focus{
+            border: 1px solid $Accent;
+        }
+    }
+    button{
+        width: 96%;
+        margin-left: 0.6rem;
+        height: 50px;
+        border: none;
+        outline:none;
+        background-color: $Green;
+        color:#fff;
+        font-weight: bold;
+        border-radius: 3px;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0px 7px 1px 0px #2aa26e;
+    }
+    small{
+        font-size: 10px;
+        text-align: center;
+        margin-top: 1rem;
+        color:$Grayish-Blue;
+        span{
+            color:$Red;
+            font-weight: bold;
+        }
+    }
+}
+
+.error{
+   input{
+     background-image: url(../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    border: 2px solid $Red;
+    }
+    p{
+        font-size: 10px;
+        text-align: right;
+        color:$Red;
+        font-weight: bold;
+        font-style: italic;
+        display: block !important;
+    }
+}
+
+.input-div{
+    p{
+       display: none;
+    }
+}
+
+@media screen and (max-width:820px) {
+    body{
+        height: 100%;
+        overflow: scroll;
+        background-repeat: repeat;
+    }
+    .container{
+        margin: 20px auto;
+    }
+    .card{
+        flex-direction: column;
+        .card-text-part{
+            width: 100%;
+            h1{
+                font-size: 2rem;
+            }
+            p{
+               width: 100%;
+               margin: 0 auto;
+               text-align: center;
+            }
+        }
+        .card-form-part{
+            width: 100%;
+            margin: 10px auto;
+            .free-div{
+                width: 100%;
+            }
+            form{
+                width: 100%;
+                padding: 1rem;
+                button{
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
